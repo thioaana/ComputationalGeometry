@@ -23,7 +23,7 @@ Given a simple convex polygon V 1 V 2 · · · V m and n points p 1 , p 2 , . . 
 outside or on the border of the polygon.
 
 
-**Week 2 - Convex Hulls**
+[**Week 2 - Convex Hulls**](https://github.com/thioaana/ComputationalGeometry/tree/master/PointInclusionInAPolygonWeek1)
 
 2.1 Convex polygon
 
