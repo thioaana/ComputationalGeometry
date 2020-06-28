@@ -1,7 +1,7 @@
 # ComputationalGeometry
 ## Coursera - Saint Petersburg University
 
-**Week 1 - Point Inclusion in a Polygon**
+[**Week 1 - Point Inclusion in a Polygon**](https://github.com/thioaana/ComputationalGeometry/tree/master/PointInclusionInAPolygonWeek1)
 
 1.1 Points and Vector : 
 
