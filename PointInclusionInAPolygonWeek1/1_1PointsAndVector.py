@@ -16,9 +16,9 @@ def getInput():
 
 def PointAndVector(vStart, vEnd, myPoint):
     det = (vEnd[0] - vStart[0]) * (myPoint[1] - vStart[1]) - (myPoint[0] - vStart[0]) * (vEnd[1] - vStart[1])
-    if np.linalg.det(d) > 0:
+    if det > 0:
         return "LEFT"
-    elif np.linalg.det(d) < 0:
+    elif det < 0:
         return "RIGHT"
     else:
         maxVertical = max(vStart[1], vEnd[1])
