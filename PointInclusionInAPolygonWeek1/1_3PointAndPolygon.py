@@ -1,87 +1,88 @@
-import numpy as np
-import matplotlib.pyplot as plt
+#uses python3
+
+# import matplotlib.pyplot as plt
 import sys
 
-# Input - Two vertices (coords) of an edge and a point (coords)
-# Output  - BORDER : Point on the edge, OUTSIDE : Ray from point on the left will not itersects the edge and INSIDE : Ray will intersect the edge
+def getInput():
+    m= int(input())
+    polygon = []
+    st = [int(i) for i in input().split()]
+    for i in range(0, 2 * m, 2) :
+        polygon.append((st[i], st[i + 1]))
+
+    n = int(input())
+    points = []
+    for i in range(n):
+        temp = input().split()
+        points.append((int(temp[0]), int(temp[1])))
+    return polygon, points
+
+def fixOrientation(v0, v1):
+    if v0[1] <= v1[1] :
+        vStart = v0[:]
+        vEnd = v1[:]
+    else :
+        vStart = v1[:]
+        vEnd = v0[:]
+    return vStart, vEnd
+
 def PointAndVector(v0, v1, myPoint):
+    vStart, vEnd = fixOrientation(v0, v1)
+
     # Checks if the vector has 0 length and aborts
-    if v0[0] == v1[0] and v0[1] == v1[1]:
+    if vStart[0] == vEnd[0] and vStart[1] == vEnd[1]:
         print("The vector has 0 length - Program aborts")
         sys.exit()
 
-    # vStart is the lower vertix and vEnd is the upper vertix
-    if v0[1] <= v1[1] :
-        vStart = v0; vEnd = v1
-    elif v0[1] > v1[1] :
-        vStart = v1; vEnd = v0
+    det = (vEnd[0] - vStart[0]) * (myPoint[1] - vStart[1]) - (myPoint[0] - vStart[0]) * (vEnd[1] - vStart[1])
+    # In case det = zero (or almost)
+    if abs(det) < 0.00000001:
+        maxVertical = max(vStart[1], vEnd[1])
+        minVertical = min(vStart[1], vEnd[1])
+        if vStart[1] != vEnd[1]:  # In case of non - horizontal vector
+            if myPoint[1] < minVertical or myPoint[1] > maxVertical:
+                return "ON_LINE"
+            else:
+                return "ON_SEGMENT"
+        else:  # In case of horizontal vector
+            maxHorizontal = max(vStart[0], vEnd[0])
+            minHorizontal = min(vStart[0], vEnd[0])
+            if myPoint[0] < minHorizontal or myPoint[0] > maxHorizontal:
+                return "ON_LINE"
+            else:
+                return "ON_SEGMENT"
 
-    if vStart[1] == vEnd[1] : return "OUTSIDE" # Ignore horizontal edges
-    if myPoint[1] < vStart[1] or myPoint[1] > vEnd[1] : return "OUTSIDE" # Ignore cases where point is beyond edge in order of y axis
+    # DEGENERATE CASES
+    if vStart[1] == vEnd[1]: return "LEFT"  # Edge is horizontal and point is out of the line
+    if vEnd[1] == myPoint[1]: return "LEFT" # Intersections on the upper end of the edge.
 
-    a = np.array([vStart, vEnd, myPoint], dtype = np.int64)
-    b = np.ones((3, 1), dtype = np.int64)
-    d = np.hstack((a, b)) # append a column
-    det = np.linalg.det(d)
+    if det > 0:
+        return "LEFT"
+    else :  # np.linalg.det(d) < 0:
+        if myPoint[1] in range(vStart[1], vEnd[1]) : return "RIGHT"
+        else : return "LEFT"
 
-    if abs(det) < 0.00000001 : return "BORDER"  # Almost zero
-    if det > 0 :  return "OUTSIDE"
-    if det < 0 :
-        if vEnd[1] == myPoint[1] : return "OUTSIDE"# Ignore intersections on the upper end of the edge
-        else : return "INSIDE"
-
-# Input - A Polygon and a Point
-# Output - BORDER, OUTSIDE or INSIDE. The poistion of the Point in terms of Polygon
-def PointAndPolygon(poly, myPoint):
-    #Create the edges of the polygon
-    edges = []
-    for i in range(len(poly)-1):
-        edges.append((poly[i], poly[i+1]))
-    edges.append((poly[len(poly) - 1], poly[0]))
-
+def PointAndTriangle(polygon, myPoint):#(a, b, c, myPoint):
     myCount = 0
-    for edge in edges :
-        position = PointAndVector(edge[0], edge[1], myPoint)
-        if position == "BORDER": return "BORDER"
-        if position == "INSIDE" : myCount += 1
+    for v in range(len(polygon)):
+        if v < len(polygon) - 1 :
+            position = PointAndVector(polygon[v], polygon[v + 1], myPoint)
+        else :
+            position = PointAndVector(polygon[-1], polygon[0], myPoint)
+        if position == "ON_SEGMENT": return "BORDER"
+        if position in ["RIGHT"]:
+            myCount += 1
 
     if myCount % 2 == 0 : return "OUTSIDE"
     else : return "INSIDE"
 
 if __name__ == '__main__':
-    # Reads and define the Polygon
-    m = 0
-    while m < 3 or m > 200 :
-        m = int(input("Enter the number of Vertices of the Polygon : "))
-    userInput = input("Enter coords of all Vertices with space between :").split()
-
-    polygon = []
-    # polygon = [(-3, -1), (3, -1), (3, 5), (0, 2), (-3, 4)]
-    for i in range(m):
-        polygon.append((int(userInput[2 * i]), int(userInput[2 * i + 1])))
-
-    # Reads and define the Points
-    n = 0
-    while n < 1 or n > 200 :
-        n = int(input("Enter the number of points : "))
-
-    points = []
-    for i in range(n):
-        userInput = input("Enter coords of a point with space between :").split()
-        points.append((int(userInput[0]), int(userInput[1])))
+    polygon, points = getInput()
 
     for p in points:
-        print(PointAndPolygon(polygon, p))
+        print(PointAndTriangle(polygon, p))
 
-    # PLOTTING
-    # Plotting Polygon
-    xPol = []; yPol = []
-    for pol in polygon :
-        xPol.append(pol[0]); yPol.append(pol[1])
-    xPol.append(xPol[0]); yPol.append(yPol[0])
-    plt.plot(xPol, yPol)
-
-    # Plotting Points
-    for p in points:
-        plt.scatter(p[0], p[1])
-    plt.show()
+    # for p in points:
+    #     plt.scatter(p[0], p[1])
+    # plt.plot([A[0], B[0], C[0], A[0]], [A[1], B[1], C[1], A[1]])
+    # plt.show()
