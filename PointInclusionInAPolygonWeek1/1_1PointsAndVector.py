@@ -1,6 +1,5 @@
 #uses python3
 
-import numpy as np
 # import matplotlib.pyplot as plt
 # import sys
 
@@ -16,9 +15,7 @@ def getInput():
     return a, b, p
 
 def PointAndVector(vStart, vEnd, myPoint):
-    a = np.array([vStart, vEnd, myPoint])
-    b = np.ones((3, 1))
-    d = np.hstack((a, b))  # append a column
+    det = (vEnd[0] - vStart[0]) * (myPoint[1] - vStart[1]) - (myPoint[0] - vStart[0]) * (vEnd[1] - vStart[1])
     if np.linalg.det(d) > 0:
         return "LEFT"
     elif np.linalg.det(d) < 0:
