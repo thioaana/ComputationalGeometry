@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #uses python3
 
 # import matplotlib.pyplot as plt
