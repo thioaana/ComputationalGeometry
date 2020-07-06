@@ -40,3 +40,21 @@ Given a simple convex polygon V 1 V 2 . . . V m and n points p 1 , p 2 , . . . ,
 2.4 Union of convex polygons
 
 Compute the union of the given convex polygons.
+
+**Week 3 Assignments - Intersections**
+
+3.1 Segments Intersection
+
+Given two segments, determine do they intersect or not.
+
+3.2 Polygon intersection
+
+Find the intersection of two convex polygons.
+
+3.3 The intersection of horizontal and vertical segments
+
+Given n segments parallel to the coordinate axes, count the number of intersection points. No vertical segment intersects another vertical segment, no horizontal segment intersects another horizontal segment.
+
+3.4 Intersection of a set of segments
+
+Given n segments on the plane, find all pairs of intersecting segments.
