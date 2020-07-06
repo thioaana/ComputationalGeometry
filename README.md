@@ -41,7 +41,7 @@ Given a simple convex polygon V 1 V 2 . . . V m and n points p 1 , p 2 , . . . ,
 
 Compute the union of the given convex polygons.
 
-**Week 3 Assignments - Intersections**
+[**Week 3 Assignments - Intersections**](https://github.com/thioaana/ComputationalGeometry/tree/master/IntersectionsWeek3)
 
 3.1 Segments Intersection
 
