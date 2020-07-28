@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb880a62-5b96-4091-9401-d0bd7d9be2d0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../ConvexHullsWeek2/scratch_1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_1Week3.py" beforeDir="false" />
+    <list default="true" id="0df67143-506b-4067-b04a-0df0dba672ca" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../ConvexHullsWeek2/ProgrammingAssignments.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3_3SegmentsIntersection.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1eKDvX8IgdxnlM79TNW2oF9lWUx" />
+  <component name="ProjectId" id="1ez9rgYCIjYu60t5XP0GqigzMts" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -23,10 +34,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
-    <configuration name="3_3SegmentsIntersection" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="SweepLine" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="IntersectionsWeek3" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -38,7 +50,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/3_3SegmentsIntersection.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SweepLine.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -49,7 +61,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.3_3SegmentsIntersection" />
+        <item itemvalue="Python.SweepLine" />
       </list>
     </recent_temporary>
   </component>
@@ -58,43 +70,59 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="eb880a62-5b96-4091-9401-d0bd7d9be2d0" name="Default Changelist" comment="" />
-      <created>1594061621093</created>
+      <changelist id="0df67143-506b-4067-b04a-0df0dba672ca" name="Default Changelist" comment="" />
+      <created>1595313754846</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1594061621093</updated>
+      <updated>1595313754846</updated>
     </task>
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="699" height="506" key="DebuggerActiveHint" timestamp="1594064734804">
+    <state x="664" y="264" width="581" height="528" key="#xdebugger.XInspectDialog" timestamp="1595484205623">
       <screen x="0" y="27" width="1920" height="1004" />
     </state>
-    <state width="699" height="506" key="DebuggerActiveHint/0.27.1920.1004@0.27.1920.1004" timestamp="1594064734804" />
-    <state width="1897" height="262" key="GridCell.Tab.0.bottom" timestamp="1594066249423">
+    <state x="664" y="264" width="581" height="528" key="#xdebugger.XInspectDialog/0.27.1920.1004@0.27.1920.1004" timestamp="1595484205623" />
+    <state x="718" y="270" key="#xdebugger.evaluate" timestamp="1595933926097">
       <screen x="0" y="27" width="1920" height="1004" />
     </state>
-    <state width="1897" height="262" key="GridCell.Tab.0.bottom/0.27.1920.1004@0.27.1920.1004" timestamp="1594066249423" />
-    <state width="1897" height="262" key="GridCell.Tab.0.center" timestamp="1594066249423">
+    <state x="718" y="270" key="#xdebugger.evaluate/0.27.1920.1004@0.27.1920.1004" timestamp="1595933926097" />
+    <state width="1897" height="109" key="GridCell.Tab.0.bottom" timestamp="1595942521511">
       <screen x="0" y="27" width="1920" height="1004" />
     </state>
-    <state width="1897" height="262" key="GridCell.Tab.0.center/0.27.1920.1004@0.27.1920.1004" timestamp="1594066249423" />
-    <state width="1897" height="262" key="GridCell.Tab.0.left" timestamp="1594066249423">
+    <state width="1897" height="109" key="GridCell.Tab.0.bottom/0.27.1920.1004@0.27.1920.1004" timestamp="1595942521511" />
+    <state width="1897" height="109" key="GridCell.Tab.0.center" timestamp="1595942521511">
       <screen x="0" y="27" width="1920" height="1004" />
     </state>
-    <state width="1897" height="262" key="GridCell.Tab.0.left/0.27.1920.1004@0.27.1920.1004" timestamp="1594066249423" />
-    <state width="1897" height="262" key="GridCell.Tab.0.right" timestamp="1594066249423">
+    <state width="1897" height="109" key="GridCell.Tab.0.center/0.27.1920.1004@0.27.1920.1004" timestamp="1595942521511" />
+    <state width="1897" height="109" key="GridCell.Tab.0.left" timestamp="1595942521510">
       <screen x="0" y="27" width="1920" height="1004" />
     </state>
-    <state width="1897" height="262" key="GridCell.Tab.0.right/0.27.1920.1004@0.27.1920.1004" timestamp="1594066249423" />
+    <state width="1897" height="109" key="GridCell.Tab.0.left/0.27.1920.1004@0.27.1920.1004" timestamp="1595942521510" />
+    <state width="1897" height="109" key="GridCell.Tab.0.right" timestamp="1595942521511">
+      <screen x="0" y="27" width="1920" height="1004" />
+    </state>
+    <state width="1897" height="109" key="GridCell.Tab.0.right/0.27.1920.1004@0.27.1920.1004" timestamp="1595942521511" />
+    <state width="960" height="503" key="XDebugger.FullValuePopup" timestamp="1595484180448">
+      <screen x="0" y="27" width="1920" height="1004" />
+    </state>
+    <state width="960" height="503" key="XDebugger.FullValuePopup/0.27.1920.1004@0.27.1920.1004" timestamp="1595484180448" />
+    <state x="503" y="240" width="904" height="576" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1595937075145">
+      <screen x="0" y="27" width="1920" height="1004" />
+    </state>
+    <state x="503" y="240" width="904" height="576" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.27.1920.1004@0.27.1920.1004" timestamp="1595937075145" />
+    <state x="623" y="245" width="672" height="678" key="search.everywhere.popup" timestamp="1595935259317">
+      <screen x="0" y="27" width="1920" height="1004" />
+    </state>
+    <state x="623" y="245" width="672" height="678" key="search.everywhere.popup/0.27.1920.1004@0.27.1920.1004" timestamp="1595935259317" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/3_3SegmentsIntersection.py</url>
-          <line>39</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/SweepLine.py</url>
+          <line>81</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
